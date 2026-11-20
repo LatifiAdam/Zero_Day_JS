@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07121d" />
+  <title>ZERO-DAY INTERN</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <main id="app-shell">
+    <div id="game-frame">
+      <div id="game-root" aria-label="ZERO-DAY INTERN game"></div>
+
+      <section id="menu-ui" class="ui-layer">
+        <div class="topline">
+          <div class="brand-chip"><span class="status-dot"></span> WHITETEAM SECURITY <i>·</i> INTERNAL NETWORK</div>
+          <div class="topline-right"><span class="tiny-square"></span> BUILD 0.1.0 <span class="divider-dot">/</span> SHIFT 01</div>
+        </div>
+
+        <div class="title-block">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A CYBERSECURITY OFFICE RPG</div>
+          <h1>ZERO-DAY<span>INTERN</span></h1>
+          <p id="mode-description">Your first day at WhiteTeam Security starts now.</p>
+        </div>
+
+        <nav id="main-menu" aria-label="Main menu"></nav>
+
+        <div class="bottom-hint"><kbd>↑</kbd><kbd>↓</kbd> SELECT <span>·</span> <kbd>ENTER</kbd> CONFIRM <span>·</span> <kbd>WASD</kbd> MOVE IN GAME</div>
+
+        <nav id="mode-dock" aria-label="Game modes">
+          <button class="mode-tab selected" data-mode="main"><span class="mode-icon">⌂</span><span>THE OFFICE</span></button>
+          <button class="mode-tab" data-mode="journey"><span class="mode-icon">⌁</span><span>JOURNEY</span></button>
+          <button class="mode-tab" data-mode="deck"><span class="mode-icon">▤</span><span>DECK &amp; EXPLOIT</span></button>
+          <button class="mode-tab" data-mode="worm"><span class="mode-icon">◉</span><span>THE WORM</span></button>
+          <button class="mode-tab" data-mode="purple"><span class="mode-icon">⌘</span><span>THE PURPLE</span></button>
+          <button class="mode-tab" data-mode="achievements"><span class="mode-icon">✦</span><span>ACHIEVEMENTS</span></button>
+        </nav>
+      </section>
+
+      <section id="game-ui" class="ui-layer hidden">
+        <header class="game-header">
+          <div><span class="status-dot"></span> WHITETEAM SECURITY <span class="muted-separator">/</span> OFFICE FLOOR 02</div>
+          <div class="game-header-right"><span id="day-label">DAY 01</span><button id="save-button" class="micro-button">SAVE</button><button id="back-to-menu" class="micro-button">MENU <b>ESC</b></button></div>
+        </header>
+        <aside class="objective-card">
+          <div class="objective-kicker">CURRENT ASSIGNMENT</div>
+          <strong id="objective-title">Review the authentication alert</strong>
+          <div id="objective-status">Find the Security Operations terminal.</div>
+          <div class="objective-progress"><span id="objective-progress-bar"></span></div>
+        </aside>
+        <div id="interaction-hint" class="interaction-hint hidden"><kbd>E</kbd> <span id="interaction-label">INTERACT</span></div>
+        <div class="game-footer"><span>WASD / ARROWS MOVE</span><span> E INTERACT</span><span> ESC MENU</span></div>
+      </section>
+
+      <section id="modal-layer" class="ui-layer hidden" aria-live="polite">
+        <div class="modal-card">
+          <div class="modal-top"><span class="modal-kicker" id="modal-kicker">SYSTEM MESSAGE</span><button id="modal-close" aria-label="Close">×</button></div>
+          <h2 id="modal-title">Welcome, analyst.</h2>
+          <p id="modal-copy">Your workstation is ready.</p>
+          <div id="modal-content"></div>
+          <div class="modal-actions" id="modal-actions"></div>
+        </div>
+      </section>
+
+      <div id="toast" class="toast hidden" role="status"></div>
+      <div class="scanline-overlay"></div>
+    </div>
+    <footer class="outside-footer"><span>ZERO-DAY INTERN <b>JS STARTER 0.1.0</b></span><span>LOCAL PROTOTYPE <i>·</i> OFFLINE READY AFTER INSTALL</span></footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
